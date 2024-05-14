@@ -131,15 +131,41 @@
             </div>
         </div>
         <div class="section section-career">
-            <div class="section-title">경력사항 (Career)</div>
+            <div class="section-title">경력사항 (Career)
+            <script>
+                function calculateYearsSince(startYear) {
+                    const currentYear = new Date().getFullYear();
+                    return currentYear - startYear;
+                }
+                document.addEventListener("DOMContentLoaded", function() {
+                    const yearsExperience = calculateYearsSince(2015);
+                    const badgeContainer = document.querySelector('.section-career .section-title');
+                    const experienceBadge = document.createElement('img');
+                    experienceBadge.className = 'badge';
+                    experienceBadge.src = `https://img.shields.io/badge/경력-${yearsExperience}년-4CAF50?style=for-the-badge&logo=none&logoColor=white`;
+                    experienceBadge.alt = `${yearsExperience}년 경력`;
+                    badgeContainer.appendChild(experienceBadge);
+                });
+            </script>
+            </div>
             <div class="sub-section">
                 <div class="section-content">
-                    - 2021-현재: 주식회사 코드웍스 - 선임 개발자<br>
+                    - 2020 - 현재 : 카카오페이 - 시스템 엔지니어
                 </div>
             </div>
             <div class="sub-section">
                 <div class="section-content">
-                    - 2018-2021: 글로벌소프트웨어 - 웹 개발자
+                    - 2019 - 2020 : 타임게이트 - Linux 엔지니어
+                </div>
+            </div>
+            <div class="sub-section">
+                <div class="section-content">
+                    - 2016 - 2019 : 이노피아테크 - 시스템 엔지니어
+                </div>
+            </div>
+            <div class="sub-section">
+                <div class="section-content">
+                    - 2015 - 2016 : 베이넥스 - x86 엔지니어
                 </div>
             </div>
         </div>
