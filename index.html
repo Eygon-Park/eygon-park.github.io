@@ -1,1 +1,209 @@
-hello world
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서 프로필</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap'); /* Importing Apple-style font */
+
+        body {
+            font-family: 'San Francisco', 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f8f7;
+            color: #333;
+        }
+        .container {
+            max-width: 100%;
+            padding: 40px 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+        .profile {
+            display: flex;
+            flex-direction: row; /* Changed to row for side-by-side layout */
+            align-items: left;
+            text-align: left;
+            padding: 20px;
+        }
+        .profile-image {
+            width: 250px; /* Increased size */
+            height: 250px; /* Increased size */
+            border-radius: 50%;
+            background: url('img/profile.jpg') no-repeat center center;
+            background-size: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative; /* Added for overlapping */
+            z-index: 2; /* Higher z-index to overlap */
+            transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+            transform: scale(1.0); /* Default scale */
+        }
+        .profile-image:hover {
+            transform: scale(1.15); /* Scale up by 15% on hover */
+        }
+        .profile-information {
+            margin-top: 20px;
+            margin-left: 50px; /* Added space between image and text */
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1d1d1f;
+        }
+        .title {
+            font-size: 22px;
+            color: #6e6e73;
+            margin-top: 5px;
+        }
+        .description {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #6e6e73;
+            max-width: 600px;
+        }
+        .section {
+            margin-top: 30px;
+            padding: 20px;
+            background-size: cover; /* Adjusted for full background coverage */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            border: 2px solid #ccc; /* Added a stronger border for better visibility */
+        }
+        .section-career {
+            background-image: url('img/career-background.jpg'); /* Specific background for career section */
+            background-repeat: no-repeat; /* Do not repeat the background */
+            background-position: right top; /* Position the background at the right top */
+            background-size: 8%; /* Set background size to 15% */
+        }
+        .section-skills {
+            background-image: url('img/skills-background.jpg'); /* Specific background for skills section */
+            background-repeat: no-repeat; /* Do not repeat the background */
+            background-position: right top; /* Position the background at the right top */
+            background-size: 7%; /* Set background size to 15% */
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .sub-section {
+            margin-top: 20px;
+        }
+        .section-title {
+            font-family: 'SF Pro Display', sans-serif; /* Apple-style font for section titles */
+            font-size: 24px;
+            font-weight: bold; /* Made the font weight bold */
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #ccc; /* Added a bottom border line */
+        }
+        .section-content {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .badge {
+            display: inline-block;
+            margin: 2px;
+        }
+        @media (min-width: 768px) {
+            .description {
+                text-align: justify;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="profile-image"></div>
+            <div class="profile-information">
+                <div class="name">박주승</div>
+                <div class="title">Since 2015 ~ </div>
+                <p class="description">
+                    안녕하세요, 저는 웹 개발에 열정적인 홍길동입니다. 최신 웹 기술을 사용하여 사용자 친화적이고 반응형 웹사이트를 만드는 것을 좋아합니다.
+                </p>
+            </div>
+        </div>
+        <div class="section section-career">
+            <div class="section-title">경력사항 (Career)</div>
+            <div class="sub-section">
+                <div class="section-content">
+                    - 2021-현재: 주식회사 코드웍스 - 선임 개발자<br>
+                </div>
+            </div>
+            <div class="sub-section">
+                <div class="section-content">
+                    - 2018-2021: 글로벌소프트웨어 - 웹 개발자
+                </div>
+            </div>
+        </div>
+        <div class="section section-projects">
+            <div class="section-title">참여 프로젝트 (Participated Projects)</div>
+            <div class="sub-section">
+                <div class="section-content">
+                    - 2022: 웹사이트 최적화 프로젝트 - 프로젝트 리더<br>
+                    - 2020: 이커머스 플랫폼 개발 - 주요 개발자<br>
+                </div>
+            </div>
+        </div>
+        <div class="section section-skills">
+            <div class="section-title">기술스택 (Tech Stacks)</div>
+            <div class="sub-section">
+                <div class="sub-section-title">- Frontend</div>
+                <div class="section-content">
+                    <img class="badge" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge">
+                    <img class="badge" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge">
+                    <img class="badge" src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap Badge">
+                </div>
+            </div>
+            <div class="sub-section">
+                <div class="sub-section-title">- Backend (with Framework)</div>
+                <div class="section-content">
+                    <img class="badge" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge">
+                    <img class="badge" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge">
+                </div>
+                <div class="section-content">
+                    <img class="badge" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI Badge">
+                    <img class="badge" src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django Badge">
+                </div>
+            </div>
+            <div class="sub-section">
+                <div class="sub-section-title">- Scripting</div>
+                <div class="section-content">
+                    <img class="badge" src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash Badge">
+                </div>
+            </div>
+            <div class="sub-section">
+                <div class="sub-section-title">- Code Management</div>
+                <div class="section-content">
+                    <img class="badge" src="https://img.shields.io/badge/Git-100000?style=for-the-badge&logo=git&logoColor=white" alt="Git Badge">
+                    <img class="badge" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge">
+                </div>
+            </div>
+            <div class="sub-section">
+                <div class="sub-section-title">- Operating System</div>
+                <div class="section-content">
+                    <img class="badge" src="https://img.shields.io/badge/CentOS-262577?style=for-the-badge&logo=centos&logoColor=white" alt="CentOS Badge">
+                    <img class="badge" src="https://img.shields.io/badge/Red_Hat-EE0000?style=for-the-badge&logo=redhat&logoColor=white" alt="Red Hat Badge">
+                    <img class="badge" src="https://img.shields.io/badge/Rocky_Linux-354A5F?style=for-the-badge&logo=rockylinux&logoColor=white" alt="Rocky Linux Badge">
+                    <img class="badge" src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu Badge">
+                </div>
+            </div>
+            <div class="sub-section">
+                <div class="sub-section-title">- Etc</div>
+                <div class="section-content">
+                    <img class="badge" src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack Badge">
+                    <img class="badge" src="https://img.shields.io/badge/Redis-D9281A?style=for-the-badge&logo=redis&logoColor=white" alt="Redis Badge">
+                    <img class="badge" src="https://img.shields.io/badge/Wiki-000000?style=for-the-badge&logo=wikipedia&logoColor=white" alt="Wiki Badge">
+                    <img class="badge" src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira Badge">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
